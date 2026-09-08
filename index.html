@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A smarter way to prepare for licensure exams." />
+    <title>Examora — Licensure diagnostics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Examora home"><span class="brand-mark">e.</span>examora</a>
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#diagnostic">Diagnostics</a>
+        <a href="#results">Insights</a>
+      </nav>
+      <button class="text-button" id="navStart">Start practising <span>↗</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Licensure prep, made personal</p>
+          <h1>Know what to<br /><em>study next.</em></h1>
+          <p class="lede">Examora creates board-aligned practice exams, finds the gaps behind your score, and builds a clear route to exam-ready confidence.</p>
+          <div class="hero-actions">
+            <button class="primary-button" id="heroStart">Build my diagnostic <span>→</span></button>
+            <a class="play-link" href="#how-it-works"><i>▶</i> See the flow</a>
+          </div>
+          <div class="trust-row"><span class="avatars"> <b>J</b><b>S</b><b>A</b><b>+</b></span><span>Built for serious<br />future professionals</span></div>
+        </div>
+        <div class="hero-art" aria-label="Example diagnostic score card">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="spark spark-one">✦</div><div class="spark spark-two">✦</div>
+          <div class="score-card">
+            <div class="card-top"><span class="mini-logo">e.</span><span>DIAGNOSTIC / 01</span><button aria-label="More options">•••</button></div>
+            <div class="score-content">
+              <p>EXAM READINESS</p>
+              <div class="score"><strong>78</strong><sup>%</sup></div>
+              <div class="meter"><i></i></div>
+              <div class="score-labels"><span>FOUNDATION</span><span>EXAM READY</span></div>
+            </div>
+            <div class="topic-row"><span>Clinical judgement</span><b>88%</b><i><em></em></i></div>
+            <div class="topic-row"><span>Patient care</span><b>71%</b><i><em></em></i></div>
+            <div class="topic-row"><span>Pharmacology</span><b>52%</b><i><em></em></i></div>
+            <div class="recommendation"><span>✦</span><p><b>Your focus area</b><br />Pharmacology fundamentals</p><a href="#diagnostic">View plan →</a></div>
+          </div>
+          <div class="float-note"><span>+12</span><p>points in<br />two weeks</p></div>
+        </div>
+      </section>
+
+      <section class="workflow" id="how-it-works">
+        <div class="section-heading"><p class="eyebrow"><span></span> The complete loop</p><h2>One platform.<br />Every <em>next step.</em></h2></div>
+        <p class="section-intro">Less guessing, more momentum. From your first question to your final result, every action has a purpose.</p>
+        <div class="workflow-grid">
+          <article class="workflow-card warm"><span class="step">01</span><div class="icon">◎</div><h3>Get calibrated</h3><p>Choose your board and exam date. We map the practice to what actually matters.</p><span class="arrow">→</span></article>
+          <article class="workflow-card lime"><span class="step">02</span><div class="icon">⌁</div><h3>Take a true diagnostic</h3><p>Smart question selection mirrors your test blueprint — under real timing.</p><span class="arrow">→</span></article>
+          <article class="workflow-card ink"><span class="step">03</span><div class="icon">✦</div><h3>Turn gaps into gains</h3><p>See precisely where to focus, then follow a targeted re-test plan.</p><span class="arrow">→</span></article>
+        </div>
+      </section>
+
+      <section class="diagnostic-section" id="diagnostic">
+        <div class="diagnostic-copy"><p class="eyebrow"><span></span> Create a practice set</p><h2>Start where<br />you <em>are.</em></h2><p>Pick a focus and we’ll generate a short, board-style diagnostic in seconds.</p><div class="feature-list"><span>✓ Question-level explanations</span><span>✓ Domain-level gap analysis</span><span>✓ Adaptive study recommendation</span></div></div>
+        <form class="exam-builder" id="examForm">
+          <div class="builder-head"><span>NEW DIAGNOSTIC</span><b>About 8 minutes</b></div>
+          <label>Target discipline <select id="discipline" name="discipline"><option>Nursing — NCLEX-RN</option><option>Medical — General</option><option>Teaching — Foundations</option></select></label>
+          <fieldset><legend>What needs a closer look?</legend><div class="choice-grid"><button type="button" class="choice selected" data-topic="Pharmacology">⚗ <span>Pharmacology</span></button><button type="button" class="choice" data-topic="Patient care">♡ <span>Patient care</span></button><button type="button" class="choice" data-topic="Clinical judgement">◈ <span>Clinical judgement</span></button><button type="button" class="choice" data-topic="All domains">✳ <span>All domains</span></button></div></fieldset>
+          <label>Question count <div class="range-wrap"><input id="count" type="range" min="3" max="10" value="5" /><output id="countOutput">5 questions</output></div></label>
+          <button class="primary-button full" type="submit">Generate my diagnostic <span>→</span></button>
+          <p class="form-note">No account required to start.</p>
+        </form>
+      </section>
+
+      <section class="results-section" id="results">
+        <div class="result-head"><div><p class="eyebrow"><span></span> Insight that moves you</p><h2>Your score is a<br /><em>starting signal.</em></h2></div><p>Trade a vague percentage for an actionable picture of your readiness — topic by topic, skill by skill.</p></div>
+        <div class="insight-grid"><div class="chart-card"><div class="chart-label"><span>COMPETENCY MAP</span><b>Mock result</b></div><div class="bars"><div><i style="height:88%"></i><span>Clinical</span></div><div><i style="height:71%"></i><span>Care</span></div><div class="weak"><i style="height:52%"></i><span>Pharma</span></div><div><i style="height:83%"></i><span>Safety</span></div><div><i style="height:67%"></i><span>Ethics</span></div></div><div class="chart-key"><span><i></i> On track</span><span><i></i> Focus next</span></div></div><aside class="callout"><span class="callout-icon">↗</span><p class="overline">THE EXAMORA DIFFERENCE</p><h3>Your study plan adapts as you do.</h3><p>Every re-test draws fresh questions and updates the route forward.</p><a href="#diagnostic">Build your first plan <span>→</span></a></aside></div>
+      </section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">e.</span>examora</a><p>Prep with purpose. Perform with confidence.</p><span>© 2026 EXAMORA</span></footer>
+    <dialog id="examDialog"><button class="dialog-close" id="dialogClose" aria-label="Close">×</button><div id="examContent"></div></dialog>
+    <script src="/script.js"></script>
+  </body>
+</html>
